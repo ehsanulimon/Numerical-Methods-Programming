@@ -7,7 +7,8 @@ main()
 {
     float x1,x2,f0,f1,f2,x0,root;
     int i=1,a,b,c;
-    printf("Enter a b c : ");
+    up:
+    printf("\nEnter a b c : ");
     scanf("%d %d %d",&a,&b,&c);
     
     printf("Enter two limits : ");
@@ -17,7 +18,7 @@ main()
     if(f1*f2>0)
     {
         printf("\nX1 & x2 do not bracket any root");
-        goto stop;
+        goto up;
     }
     while(i<100)
     {
@@ -38,12 +39,12 @@ main()
         {
             root = (x1+x2)/2;
             printf("\nFinal iteration=%d    Root = %f",i+1,root);
-            goto stop;
+            goto up;
         }
         else
             i++;
 
     }
-    stop:
+   // stop:
     getch();
 }
