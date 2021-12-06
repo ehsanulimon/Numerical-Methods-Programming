@@ -1,13 +1,12 @@
 #include <iostream>
 #include<math.h>
 using namespace std;
-
-#define f(x)  a *(x*x)  - b*x + c  //a=1,b=3,c=2
-#define df(x) a*2*x - b
-#define e 0.001
+#define f(x)  a *(x*x)  + b*x + c  //a=1,b=3,c=2
+#define df(x) a*2*x + b
+#define e 0.0000001
 int main() {
   double x1,x2,f1,f2,f0;
-  int i=0,a,b,c;
+  int i=1,a,b,c;
 
    cout<<"\n enter a b c ";
    cin>>a>>b>>c;
