@@ -1,7 +1,7 @@
 #include <iostream>
 #include<math.h>
 using namespace std;
-#define f(x)  a *(x*x)  + b*x + c  //a=1,b=3,c=2
+#define f(x)  a *(x*x)  + b*x + c  //a=1,b=-3,c=2
 #define df(x) a*2*x + b
 #define e 0.0000001
 int main() {
