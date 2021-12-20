@@ -1,5 +1,5 @@
 #include <iostream>     
-#include<math.h>        // In this example are solving   
+#include<math.h>        
 #include<conio.h>       // 2x + y + z = 5     => x=(5-y-z)/2    =>(5 - y -  z)/ 2
                         // 3x + 5y + 2z = 15  => y=(15-3x-2z)/5  =>(15 - 3*x - 2*z)/ 5
 using namespace std;    // 2x + y + 4z=8      => z=(8-2x-y)/4   => (8 - 2*x - y)/ 4 
@@ -10,7 +10,7 @@ using namespace std;    // 2x + y + 4z=8      => z=(8-2x-y)/4   => (8 - 2*x - y)
 #define e 0.0001                                       
 
 int main() {                                         
-  double x0=0, y0=0, z0=0, x1, y1, z1,xe,ye,ze;       
+  double x0=0, y0=0, z0=0, x1, y1, z1,xe=1,ye=1,ze=1;       
   double a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3;
   int i=0;
        cout<<"a1x + b1y + c1z = d1 eq. "<<"\ninput a1 , b1 ,c1 , d1 : ";
@@ -20,7 +20,7 @@ int main() {
        cout<<"\n a3x + b3y + c3z = d3  eq. "<<"\ninput a3 , b3 ,c3 , d3 : ";
        scanf("%lf %lf %lf %lf",&a3,&b3,&c3,&d3);
       
-    do{
+   while( xe>e  && ye>e  && ze>e){
   x1 = f1(x0,y0,z0);
   y1 = f2(x1,y0,z0);
   z1 = f3(x1,y1,z0);
@@ -36,7 +36,7 @@ int main() {
   y0 = y1;
   z0 = z1;
 	i++;
-	}while( xe>e  && ye>e  && ze>e);
+	}
 	
 	cout<< endl<<"result: x = "<< x1<<", y = "<< y1<<" and z = "<< z1;
 getch();
